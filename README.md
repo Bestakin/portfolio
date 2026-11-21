@@ -1,8 +1,26 @@
 # Best Akinlabi — Portfolio
 
-React + Vite + Tailwind CSS + Motion + Lucide + React Router.
+My personal portfolio: a fast, responsive single-page site with in-depth case studies for my main projects.
 
-## Run it
+**Live site:** _coming soon_
+
+## Featured work
+
+- **[StatCourt](https://getstatcourt.com)**: basketball and soccer analytics platform (React, FastAPI, Python, SQLite). Includes a 60-second demo video.
+- **[ParkSenseAI](https://github.com/ParkSenseAI/ParkSenseAI)**: smart parking with YOLOv8 vehicle detection and a React Native app (team capstone).
+- **[UniTrack](https://github.com/Bestakin/UniTrack)**: university enrollment platform built on FastAPI microservices.
+
+Each project has a case-study page covering the problem, solution, architecture, engineering challenges and key features.
+
+## Built with
+
+- React + Vite
+- Tailwind CSS
+- Motion (scroll and entrance animations, with reduced-motion support)
+- React Router (case-study pages)
+- Lucide icons
+
+## Run locally
 
 ```bash
 npm install
@@ -10,36 +28,23 @@ npm run dev        # http://localhost:5173
 npm run build      # production build in dist/
 ```
 
-## Where to edit
+## Project structure
 
-Almost everything you'll change is in two files:
+```
+src/
+  data/profile.js      # bio, links, experience, skills
+  data/projects.js     # project cards and case-study content
+  components/          # homepage sections and shared UI
+  pages/               # Home, CaseStudy, NotFound
+public/
+  media/               # StatCourt demo video and screenshots
+  images/              # project previews
+```
 
-- `src/data/profile.js`: name, links, resume, photo, highlights, experience, skills, about text
-- `src/data/projects.js`: featured projects (carousel + case studies) and the "More projects" cards
+## Deployment
 
-Links set to `null` are hidden, so nothing shows as a broken button.
+Deployed on Vercel. `vercel.json` rewrites all routes to `index.html` so case-study URLs work on refresh.
 
-## Placeholders to fill (TODO)
+## Contact
 
-- [ ] `public/resume.pdf`: add your resume (the Resume buttons download this file)
-- [ ] `profile.github` and `profile.linkedin` URLs (the icons and buttons appear once set)
-- [ ] `profile.photo`: headshot in `public/images/`
-- [ ] DemmyPay exact dates (`experience[0].dates`)
-- [ ] Screenshots: put them in `public/images/` and set each project's `image`
-- [ ] GitHub links for each project
-- [ ] Case-study text for each featured project: `problem`, `solution`, `architecture`, `challenges`
-- [ ] UniTrack technologies
-- [ ] Movie Website: set `show: true` once details are confirmed
-- [ ] Optional: a rendered hero image. Set `HERO_IMAGE` in `src/components/HeroIllustration.jsx`
-- [ ] Optional: `og:image` / `og:url` in `index.html` once you have a domain
-
-## Deploy
-
-**Vercel (recommended):** push to GitHub, then "Import Project" on vercel.com. It detects Vite automatically. `vercel.json` already handles the case-study routes.
-
-**Render:** New → Static Site. Build command `npm install && npm run build`, publish directory `dist`. Then add a rewrite rule: source `/*`, destination `/index.html`, action Rewrite (needed so `/projects/statcourt` works on refresh).
-
-## Notes
-
-- Animations respect the visitor's "reduce motion" setting.
-- Tech-stack cards use short monograms (Ja, Sb, K8s). Swap in real logos from a library like devicon if you want.
+[LinkedIn](https://www.linkedin.com/in/best-akinlabi-817416251/) · [GitHub](https://github.com/Bestakin) · akinlabibest@gmail.com
